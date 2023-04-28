@@ -8,15 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
     WebDriver driver;
 
-    @FindBy(name = "username")
+    @FindBy(name = "uid")
     WebElement userIdFld;
 
     @FindBy(name = "password")
     WebElement passwordFld;
 
-    @FindBy(id = "loginbtn")
+    @FindBy(name = "btnLogin")
     WebElement loginBtn;
-
 
     public LoginPage(WebDriver driver){
         this.driver = driver;
@@ -31,7 +30,8 @@ public class LoginPage {
         passwordFld.sendKeys(password);
     }
 
-    public void clickLoginBtn(){
+    public HomePage clickLoginBtn(){
         loginBtn.click();
+        return new HomePage(driver);
     }
 }
