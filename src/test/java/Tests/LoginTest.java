@@ -19,7 +19,7 @@ public class LoginTest {
 
     @BeforeSuite
     public void setUp(){
-        WebDriverManager.chromedriver().setup()
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
@@ -33,7 +33,7 @@ public class LoginTest {
         driver.get("https://moodle.sdu.edu.kz/login/index.php");
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserID("200103080");
-        loginPage.fillPassword("17036889");
+        loginPage.fillPassword("200103080");
         loginPage.clickLoginBtn();
         Thread.sleep(1000);
     }
