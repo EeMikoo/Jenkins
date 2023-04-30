@@ -30,7 +30,6 @@ public class LoginTest {
     }
     @Test
     public void loginTest() throws InterruptedException {
-        driver.get("https://moodle.sdu.edu.kz/login/index.php");
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserID("200103080");
         loginPage.fillPassword("200103080");
