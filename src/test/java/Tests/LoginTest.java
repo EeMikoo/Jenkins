@@ -30,7 +30,6 @@ public class LoginTest {
     }
     @Test
     public void loginTest() throws InterruptedException {
-        LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserID("200103080");
         loginPage.fillPassword("200103080");
         loginPage.clickLoginBtn();
